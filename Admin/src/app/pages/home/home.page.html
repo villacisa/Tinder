@@ -1,11 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div id= "contenedor">
+  <div id="contenedor">
+    <!--<script src="https://kit.fontawesome.com/15f3636ee4.js" crossorigin="anonymous"></script>
+    <i class="fa-brands fa-gripfire"></i>-->
     <h1>TINDER</h1>
+    <div id="botones">
+      <ion-grid>
+        <ion-row>
+          <ion-col align-self-center>
+            <ion-button [routerLink]="['/registration']" expand="block" color="primary">Registro</ion-button>
+            <span class="divider line one-line">O</span>
+            <span class="already">Ya dispone de usuario?</span>
+            <ion-button [routerLink]="['/login']" expand="block" color="danger">Iniciar Sesión</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
+
 </ion-content>
