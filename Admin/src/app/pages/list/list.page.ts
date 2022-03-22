@@ -11,7 +11,6 @@ export class ListPage implements OnInit {
 
   ngOnInit() {
   }
-
     users: [
     {
         nombre: "Lucía",

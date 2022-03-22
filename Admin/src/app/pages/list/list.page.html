@@ -1,26 +1,26 @@
-<app-header titol = "POKÉDEX" bgcolor = "warning"></app-header>
+<app-header titol = "USUARIOS" bgcolor = "primary"></app-header>
 
 <ion-content>
     <ion-list id="lista">
-        <p><b>Usuarios ENCONTRADOS:</b></p>
-        <div *ngFor="let usr of users; let i = index;">
+          <p><b>USUARIOS ENCONTRADOS: {{i}}</b></p>
+        <div *ngFor="let us of users; let i = index;">
             <!-- AÑADIR LO SIGUIENTE PARA EN EL ITEM PARA IR AL DETAIL DEL POKEMON
                          routerLink="/detail/{{i}}"-->
             <ion-item-sliding>
                 <ion-item-options side="end">
-                    <ion-item-option color="danger" (click)="removePokemon(pk.id)">
+                    <ion-item-option color="danger">
                       <ion-icon slot="icon-only" name="trash" ></ion-icon>
                     </ion-item-option>
                 </ion-item-options>
 
                 <ion-item>
                     <ion-avatar slot="start">
-                        <img src="{{pk.thumbnail}}">
+                        <img src="{us.name}}">
                     </ion-avatar>
-                    <div id="{{pk.title}}">
+                    <div id="{{us.name}}">
                         <ion-label>
-                            <h2>{{pk.title}}</h2>
-                            <h3>Pokemon de tipo {{pk.tipo}}</h3>
+                            <h2>{{us.name}}</h2>
+                            <h3>{{us.last_name}}</h3>
                         </ion-label>
                     </div>
                 </ion-item>
