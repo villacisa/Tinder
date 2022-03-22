@@ -1,7 +1,19 @@
 #contenedor{
     height: 100%;
-    background-color: #e174ebd3;
+    background-color: #6a2b70d3;
     margin-top: 0px;
+}
+.logo{
+    display: flex;
+    width: 100%;
+    
+    margin: 0 auto;
+    padding-top: 5%;
+    overflow: hidden;
+    justify-content: center;
+}
+img{
+    width: 20%;
 }
 h1 {
     text-align: center;
