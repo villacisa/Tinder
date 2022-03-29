@@ -1,3 +1,7 @@
+CREATE USER 'tinder'@'localhost' IDENTIFIED BY 'tinder' if not exists;
+GRANT ALL PRIVILEGES ON * . * TO 'tinder'@'localhost';
+FLUSH PRIVILEGES;
+
 Crate database Tinder if not exists;
 use Tinder;
 
