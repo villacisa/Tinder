@@ -10,6 +10,13 @@ class App{
         if (file_exists($archivo)){
             require_once $archivo;
             $control = new $url[0];
+            $aux = sizeof($ur);
+            if ($aux == 2) {
+                $control->{$url[1]}();
+            }
+            if($aux==3) {
+                $control->{$url[1]}($url[2]);
+            }
         }
     }
 }
