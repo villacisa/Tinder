@@ -10,7 +10,7 @@
 <div id="lista">
 <?php
     echo "<table>";
-    foreach ($users as $usrs){
+    foreach ($users as $actual){
         echo "<tr><td>".$usrs["id"] . "</td><td>";
         echo $usrs["nombre"] . "</td></tr>";
     }

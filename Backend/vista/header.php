@@ -67,7 +67,7 @@
     <nav>
         <ul>
             <li><a href="main" >Inicio</a></li>
-            <li><a href="Peliculas_c/listar">Listado</a></li>
-            <li><a href="Peliculas_c/nueva">Nueva</a></li>
+            <li><a href="users_c/listar">Listado</a></li>
+            <li><a href="users_c/nueva">Nueva</a></li>
         </ul>
     </nav>
