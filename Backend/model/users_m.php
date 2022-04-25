@@ -71,5 +71,9 @@
                 
             $res_delete = $this->db->prepare($consulta)->execute(array($id));
         }
+        public function insert($id,$nombre,$edad,$genero,$descripcion,$mail,$pwd) {
+            $sentencia = $this->db->prepare("Insert into users (id,nombre,edad,genero,descripcion,mail,pwd) values(:id,:nombre,:edad,:genero,:descripcion,:mail,:pwd)");
+            $sentencia->bindParam(':id')
+        }
     }
 ?>
