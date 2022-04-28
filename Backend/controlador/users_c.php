@@ -31,7 +31,7 @@
         
         private function getUser($params){
             $model = new Users_model();
-            /*if (count($params) == 0){
+            if (count($params) == 0){
                 $users = $model->getUsers();
             }else{
                 switch (strtolower($params[0])){
@@ -55,7 +55,7 @@
                     default:
                         echo "bad request";
                 }
-            }*/
+            }
             $peliculas=$p->getPelis();
 
             require_once("./vista/users_v.php");

@@ -3,16 +3,16 @@
     <table id=peliculas>
         <tr>
             <th>Id</th>
-            <th>Títol</th>
-            <th>Any</th>
-            <th>Puntuació</th>
-            <th>Vots</th>
+            <th>nombre</th>
+            <th>genero</th>
+            <th>edad</th>
+            <th>likes</th>
         </tr>
     </table>
     <script>
-        function procesa_pelicules(data){
+        function procesa_usuarios(data){
                     for (var i=0;i < data.length; i++){
-                        var row = document.getElementById("peliculas").insertRow(1 + i);
+                        var row = document.getElementById("users").insertRow(1 + i);
                         if (i%2==0){
                             row.classList.add("fila_parell");
                         }else{
@@ -29,7 +29,7 @@
         }
 
         function init(){
-            fetch("http://localhost/frmk/peliculas/")
+            fetch("https://private-325db3-martamillanlombrana.apiary-mock.com/login?New%20item=")
                 .then(response => response.json())
                 .then(data => procesa_pelicules(data));
         }
