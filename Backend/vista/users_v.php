@@ -14,5 +14,17 @@
         echo "<tr><td>".$usrs["id"] . "</td><td>";
         echo $usrs["nombre"] . "</td></tr>";
     }
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, "https://private-325db3-martamillanlombrana.apiary-mock.com/users
+    ");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    var_dump($response);
 ?>
 </div>
