@@ -25,5 +25,3 @@ VISTA USUARIO
   - Ionic (Angular)
   - PHP
   - Mysql
-
-ewqewqew
