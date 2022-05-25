@@ -7,20 +7,18 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <form>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input [(ngModel)]="email" type="text" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input [(ngModel)]="password" type="password" required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Iniciar Sesión</ion-button>
+        <ion-button (click)="login()" type="submit" color="danger" expand="block">Iniciar Sesión</ion-button>
         <a [routerLink]="['/forgot-password']" class="small-text">Has olvidado tu contraseña?</a>
       </ion-col>
     </ion-row>
-  </form>
 </ion-content>

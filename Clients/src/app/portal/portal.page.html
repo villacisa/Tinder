@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon style="width: 35px; height: 35px;"name="person-circle-outline"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/chat']">
+        <ion-icon style="width: 35px; height: 35px;"name="chatbubbles-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title class="titleApp">TINDER</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--USUARIOS-->
+<div class="AllUsers" *ngIf="usuario!=null">
+  <div>
+    <!--IMAGENES-->
+    <img src="{{usuario.image}}" class="imgPerfil">
+
+    <!--BOTONES DESLIZAR IMAGENES -->
+    <div class="flechas">
+      <ion-buttons>
+        <ion-button (click)="flechaIzq()">
+          <ion-icon style="width: 35px; height: 35px;color: white;" name="arrow-back-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="flechaDer()">
+          <ion-icon style="width: 35px; height: 35px;color: white;" name="arrow-forward-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+    <!--DATOS USUARIO-->
+    <div class="datosPerfil">
+      <p class="nomPerfil">{{usuario.username}}</p>
+      <p>Edad: {{usuario.age}}</p>
+      <p>Descripción: {{usuario.description}}</p>
+    </div>
+  </div>
+  
+</div>
+
+<!--BOTONES LIKE Y DISLIKE-->
+
+<div class="buttonsLikeDislike">
+  <ion-buttons slot="start" >
+    <ion-button (click)="btnLike()" >
+      <ion-icon style="width: 45px; height: 45px;color: red;"name="heart-outline"></ion-icon>
+      <p style="color:white;">LIKE</p>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button (click)="btnDislike()" >
+      <ion-icon style="width: 40px; height: 40px;color: red;"name="heart-dislike-outline"></ion-icon>
+      <p style="color:white;">DISLIKE</p>
+    </ion-button>
+  </ion-buttons>
+</div>
+
+

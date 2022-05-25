@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../../Descargas/hello-nodeJS-sessio-addproduct-moduls-20220404T145819Z-001"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hello-nodeJS"
+	}
+}

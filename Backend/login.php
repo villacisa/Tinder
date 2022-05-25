@@ -4,7 +4,7 @@
     $pwd = $_POST['contrasenya'];
     
     $con = new mysqli();
-    $con->connect('localhost','marc','marc','Tinder');
+    $con->connect('localhost','jesus','jesus','Tinder');
 
     if($con>connect_errno) {
         printf("Connect failed: %s\n", $mysqli->connect_error);

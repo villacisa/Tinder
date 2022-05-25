@@ -1,0 +1,33 @@
+.cuadrotexto{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-color:red;
+    background-color:black;
+    top: -255px;
+    
+}
+.textosmsgRight{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+}
+
+.texto{
+    border-radius: 10px;
+    max-width: 50%;
+    background: red;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.textosmsgLeft{
+    text-align: right;
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    width: 100%;
+    text-align: justify;
+}
+
+
