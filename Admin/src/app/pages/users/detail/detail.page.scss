@@ -1,7 +1,41 @@
+.general{
+    background-color:  #6a2b70d3;
+    height: 100%;
+}
+
+#buttons{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .back-btn{
+        button{
+            font-weight: 900;
+            padding:5px;
+            font-size: 17px;
+            border-radius: 5px;
+            background-color: black;
+            color:white;
+        }
+    }
+
+    .delete-btn{
+        button{
+            font-weight: 900;
+            padding:5px;
+            font-size: 17px;
+            border-radius: 5px;
+            background-color: black;
+            color:red;
+        }
+    }
+}
+
+
 #contenedor{
     width: 90%;
     margin: auto;
-    background-color: rgba(255, 228, 196, 0.475);
+    background-color: rgba(255, 228, 196, 0.705);
     border-radius: 3%;
 }
 
@@ -59,4 +93,5 @@
         padding-bottom: 20px;
     }
 }
+
 

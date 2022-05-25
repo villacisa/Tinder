@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -9,7 +10,7 @@ import { ApiService } from '../../api.service';
 export class UsersPage implements OnInit {
 
   constructor(
-    public _apiService: ApiService
+    public _apiService: ApiService, private router: Router
     ) { }
 
     usuarios: Object;
@@ -26,6 +27,10 @@ export class UsersPage implements OnInit {
       console.log(this.usuarios);
   });
 
+  }
+
+  goBack() {
+    this.router.navigate(['/home']);
   }
 
 }

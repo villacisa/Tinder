@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -13,7 +14,7 @@ export class DetailPage implements OnInit {
   usuario: Object;
   isDataLoaded: boolean = false;
 
-  constructor(private route: ActivatedRoute, public _apiService: ApiService) {
+  constructor(private route: ActivatedRoute, public _apiService: ApiService, private router: Router) {
     this.id = this.route.snapshot.paramMap.get("id");
   }
 
@@ -27,6 +28,10 @@ export class DetailPage implements OnInit {
       this.isDataLoaded = true;
       console.log(this.usuario);
     })
+  }
+
+  goBack() {
+    this.router.navigate(['/users']);
   }
 
 }

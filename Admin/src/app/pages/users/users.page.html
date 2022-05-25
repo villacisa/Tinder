@@ -2,7 +2,10 @@
 
 <ion-content>
     <ion-list id="lista">
-          <p><b>USUARIOS EXISTENTES: {{i}}</b></p>
+        <div class="back-btn">
+            <button mat-raised-button (click)="goBack()">Logout</button>
+        </div>
+          <p id="title_label"><b>USUARIOS EXISTENTES: {{i}}</b></p>
         <div *ngFor="let us of usuarios;" id="etiqueta">
             <!-- AÑADIR LO SIGUIENTE PARA EN EL ITEM PARA IR AL DETAIL DEL POKEMON
                          routerLink="/detail/{{i}}"-->
