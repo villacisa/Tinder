@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -9,21 +11,32 @@ import { ApiService } from '../../api.service';
 export class LoginPage implements OnInit {
 
   constructor(
-    public _apiService: ApiService
+    public _apiService: ApiService,
+    private router: Router
     ) { }
 
+    private nombre: string;
+    private pwd: string;
+
   ngOnInit() {
-    console.log("EN LOGIN");
-    this.readAdmins();
   }
 
 
-  //función que hará una petición POST para comprobar que el usuario
-  //con el que se intenta logear es uno de los admins (cambiar nombre de función)
-  readAdmins(){
-    this._apiService.readAdmins().subscribe((response) => {
+
+  validateForm(){
+    console.log(this.nombre, this.pwd)
+
+    var data = new FormData();
+    data.append("nombre", this.nombre);
+    data.append("pwd", this.pwd);
+
+    this._apiService.getUserAdmin(data).subscribe((response) => { //Esta función comprobaría si el usuario es correcto
       console.log(response);
-});
+    });
+
+    /* Aqui crearía una condición que dependiendo de la respuesta 
+    del apiService entraría o no a la lista de usuarios */
+    this.router.navigate(['/users']);
 
   }
 

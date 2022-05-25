@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar *ngIf="isDataLoaded">
+      <ion-title>  {{usuario.username}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="isDataLoaded">
+  <div id="contenedor">
+
+    <div id="row1">
+      <div id="imagen">
+        <img src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/f/3/5/2/f352b0854c086944629262f2d048416f.jpg"> <!-- {{usuario.image}} -->
+      </div>
+
+      <div id="basicInfo1">
+        <div id="nombre">
+          {{usuario.username}}
+        </div>
+        <div id="information">
+          <div id="personalInformation">
+            <h2>Personal Information</h2>
+            <div>
+              <span><b>Age:</b> {{usuario.age}}</span>
+            </div>
+            <div>
+              <span><b>Genre:</b> {{usuario.genre}}</span>
+            </div>
+          </div>
+  
+          <div id="profileInformation">
+            <h2>Account Information</h2>
+            <div>
+              <span><b>Matches:</b> {{usuario.matches}}</span>
+            </div>
+            <div>
+              <span><b>Create user data:</b> {{usuario.dataCreated}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="row2">
+        <h3 style="text-decoration: underline; text-align: center;">Description</h3>
+        <div id="basicInfo2">
+          <span>{{usuario.description}}</span>
+        </div>
+    </div>
+
+  </div>
+</ion-content>

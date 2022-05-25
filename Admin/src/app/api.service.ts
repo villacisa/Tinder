@@ -11,19 +11,16 @@ export class ApiService {
 
   ) { }
 
-  readAdmins(){
-    return this.http.get('https://private-b7f49-martamillanlombrana.apiary-mock.com/users'); //cambiar ruta
+  getUserAdmin(data){
+    return this.http.post('https://private-79538-tinder5.apiary-mock.com/login', data); //cambiar ruta
   }
 
   readUsers(){
-    return this.http.get('https://private-b7f49-martamillanlombrana.apiary-mock.com/users'); //cambiar ruta
+    return this.http.get('https://private-b7f49-martamillanlombrana.apiary-mock.com/users');
   }
 
-  readPokemons(data){
-    return this.http.post('http://localhost/backendionic/read.php', data);
-  }
-
-  removePokemon(data){
-    return this.http.post('http://localhost/backendionic/delete.php', data);
+  detailOneUser(id){
+    id=1;
+    return this.http.get('https://private-b7f49-martamillanlombrana.apiary-mock.com/user/' + id);
   }
 }

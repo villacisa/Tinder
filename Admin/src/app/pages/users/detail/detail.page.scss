@@ -1,0 +1,61 @@
+#contenedor{
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 228, 196, 0.475);
+    border-radius: 3%;
+}
+
+#row1{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    #imagen{
+        width: 40%;
+        padding: 15px;
+    }
+    
+    img{
+        width: 65%;
+        border-radius: 40%;
+    }
+
+    #basicInfo1{
+        width: 60%;
+
+        #nombre{
+            align-items: center;
+            display: flex;
+            height: 150px;
+            justify-content: center;
+
+            font-weight: 900;
+            font-size: 200%;
+        }
+        #information{
+            border-top: 0.5px solid black;
+            border-bottom: 0.5px solid black;
+            width: 100%;
+            display: flex;
+            flex-direction:row;
+            justify-content:space-around;
+            padding-bottom: 12%;
+
+            h2{
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+#row2{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 25px;
+
+    #basicInfo2{
+        text-align: justify;
+    }
+}
+

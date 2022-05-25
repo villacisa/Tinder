@@ -3,17 +3,17 @@
 <ion-content>
     <ion-list id="lista">
           <p><b>USUARIOS EXISTENTES: {{i}}</b></p>
-        <div *ngFor="let us of usuarios; let i = index;" id="etiqueta">
+        <div *ngFor="let us of usuarios;" id="etiqueta">
             <!-- AÑADIR LO SIGUIENTE PARA EN EL ITEM PARA IR AL DETAIL DEL POKEMON
                          routerLink="/detail/{{i}}"-->
-            <ion-item-sliding id="etiqueta">
+            <ion-item-sliding id="etiqueta" >
                 <ion-item-options side="end">
                     <ion-item-option color="danger">
                       <ion-icon slot="icon-only" name="trash" ></ion-icon>
                     </ion-item-option>
                 </ion-item-options>
 
-                <ion-item>
+                <ion-item routerLink="detail/{{us.id}}">
                     <ion-avatar slot="start">
                         <img src="{{us.image}}">
                     </ion-avatar>
