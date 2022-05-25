@@ -1,0 +1,33 @@
+<app-header titol = "USUARIOS" bgcolor = "primary"></app-header>
+
+<ion-content>
+    <ion-list id="lista">
+          <p><b>USUARIOS EXISTENTES: {{i}}</b></p>
+        <div *ngFor="let us of usuarios;" id="etiqueta">
+            <!-- AÑADIR LO SIGUIENTE PARA EN EL ITEM PARA IR AL DETAIL DEL POKEMON
+                         routerLink="/detail/{{i}}"-->
+            <ion-item-sliding id="etiqueta" >
+                <ion-item-options side="end">
+                    <ion-item-option color="danger">
+                      <ion-icon slot="icon-only" name="trash" ></ion-icon>
+                    </ion-item-option>
+                </ion-item-options>
+
+                <ion-item routerLink="detail/{{us.id}}">
+                    <ion-avatar slot="start">
+                        <img src="{{us.image}}">
+                    </ion-avatar>
+                    <div id="{{us.username}}">
+                        <ion-label>
+                            <h2>{{us.username}}</h2>
+                            <h3>Age: {{us.age}}</h3>
+                        </ion-label>
+                    </div>
+                </ion-item>
+            </ion-item-sliding>
+        </div>
+      </ion-list>
+      <ion-infinite-scroll thresold="100px" (ionInfinite) = "loadData($event)">
+        <ion-infinite-scroll-content loaddingSpinner="bubbles" loadingText = "Loadin more data..."></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+</ion-content>

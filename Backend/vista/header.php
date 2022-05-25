@@ -66,7 +66,8 @@
 <body>
     <nav>
         <ul>
-            <li><a href="http://localhost/frmk/main/" >Inici</a></li>
-            <li><a href="http://localhost/frmk/peliculas/" >Llistat</a></li>
+            <li><a href="main" >Inicio</a></li>
+            <li><a href="users_c/listar">Listado</a></li>
+            <li><a href="users_c/nueva">Nueva</a></li>
         </ul>
     </nav>

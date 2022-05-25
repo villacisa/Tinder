@@ -17,6 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
   {
+<<<<<<< HEAD
     path: 'portal',
     loadChildren: () => import('./portal/portal.module').then( m => m.PortalPageModule)
   },
@@ -29,6 +30,11 @@ const routes: Routes = [
     loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
   },
  
+=======
+    path: 'chats',
+    loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
+  },
+>>>>>>> 5ce89fd53e67b4caead5c71edfebb0aed4c10601
 ];
 
 @NgModule({

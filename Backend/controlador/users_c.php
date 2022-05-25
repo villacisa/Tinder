@@ -19,6 +19,16 @@
             }
         }
 
+        function listar(){
+            $u=new Users_model();
+            $users=$u->getUsers();
+            require_once("./vista/users_v.php");
+        }
+
+        function nueva(){
+            alert("ABRIR FORMULARIO PARA REGISTRAR USUARIO");
+        }
+        
         private function getUser($params){
             $model = new Users_model();
             if (count($params) == 0){
@@ -46,6 +56,8 @@
                         echo "bad request";
                 }
             }
+            $peliculas=$p->getPelis();
+
             require_once("./vista/users_v.php");
         }
 
